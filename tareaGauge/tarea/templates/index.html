@@ -1,0 +1,15 @@
+<html>
+    <head>
+        {% load static %}
+        <link href="{% static 'estilos.css' %}", rel="stylesheet"/>
+    </head>
+
+    <body>
+        <h1>Dame tu nombre</h1>
+        <form action="procesamiento" method="POST">
+            {% csrf_token %}
+            <input type="text" name="nombre"/>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>
